@@ -28,12 +28,13 @@ figurinhas = [
     {"id": 3, "nome": "Homem Aranha", "categoria": "super-heroi", "imagem_url": "/figurinhas/3/imagem"},
     {"id": 4, "nome": "Mulher Maravilha", "categoria": "super-heroi", "imagem_url": "/figurinhas/4/imagem"},
     {"id": 5, "nome": "Super Homem", "categoria": "super-heroi", "imagem_url": "/figurinhas/5/imagem"},
+    {"id": 6, "nome": "Harry Potter", "categoria": "fantasia-rpg", "imagem_url": "/figurinhas/6/imagem"},
+    {"id": 7, "nome": "Gandalf", "categoria": "fantasia-rpg", "imagem_url": "/figurinhas/7/imagem"},
+    {"id": 8, "nome": "Geralt de Rívia", "categoria": "fantasia-rpg", "imagem_url": "/figurinhas/8/imagem"},
+    {"id": 9, "nome": "Frodo Bolseiro", "categoria": "fantasia-rpg", "imagem_url": "/figurinhas/9/imagem"},
+    {"id": 10, "nome": "Hermione Granger", "categoria": "fantasia-rpg", "imagem_url": "/figurinhas/10/imagem"},
     # Figurinhas que ainda não estão disponíveis (imagens ausentes na pasta):
-    # {"id": 6, "nome": "Harry Potter", "categoria": "fantasia-rpg", "imagem_url": "/figurinhas/6/imagem"},
-    # {"id": 7, "nome": "Gandalf", "categoria": "fantasia-rpg", "imagem_url": "/figurinhas/7/imagem"},
-    # {"id": 8, "nome": "Geralt de Rívia", "categoria": "fantasia-rpg", "imagem_url": "/figurinhas/8/imagem"},
-    # {"id": 9, "nome": "Frodo Bolseiro", "categoria": "fantasia-rpg", "imagem_url": "/figurinhas/9/imagem"},
-    # {"id": 10, "nome": "Hermione Granger", "categoria": "fantasia-rpg", "imagem_url": "/figurinhas/10/imagem"},
+    
     # {"id": 11, "nome": "Luke Skywalker", "categoria": "ficcao-cientifica", "imagem_url": "/figurinhas/11/imagem"},
     # {"id": 12, "nome": "Spock", "categoria": "ficcao-cientifica", "imagem_url": "/figurinhas/12/imagem"},
     # {"id": 13, "nome": "Darth Vader", "categoria": "ficcao-cientifica", "imagem_url": "/figurinhas/13/imagem"},
