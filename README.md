@@ -1,49 +1,58 @@
-# Alura Album - Copa do Mundo Geek/Nerd (Frontend)
+# Álbum de Figurinhas - Copa do Mundo Geek/Nerd 🤓✨
 
-Este é o repositório do frontend do projeto **Alura Album - Copa do Mundo Geek/Nerd**, desenvolvido durante a Imersão AI da Alura. O projeto consiste em um álbum de figurinhas digital e interativo com temática geek, pop e nerd, homenageando grandes personagens de ficção, animes, jogos, memes, e celebridades da comunidade (dubladores, cantores e influenciadores).
+## Objetivo
+O projeto consiste em um álbum de figurinhas digital, interativo e imersivo com a temática Geek/Nerd. Ele simula a sensação física de folhear um álbum de papel real através de efeitos sonoros sintetizados e uma mecânica de transição de páginas realista (com suporte para gestos e arrastes), permitindo que figurinhas sejam colecionadas e coladas nos slots apropriados de forma dinâmica através de uma API desenvolvida em FastAPI.
 
----
+## Estrutura
+O projeto está dividido entre Frontend (HTML/CSS/JS) e Backend (FastAPI em Python):
+* **backend/**: Contém a API do servidor e a pasta de armazenamento das figurinhas.
+* **frontend/**: Contém os arquivos da interface gráfica do álbum do usuário.
 
-## 🎯 Objetivo do Projeto
+## O álbum
+O álbum é composto por:
+* **Páginas**: Capa, contracapa e 10 páginas temáticas (ex: Super-heróis, Fantasia & RPG, Ficção Científica, Animes, Jogos, etc.).
+* **Slots**: Um total de 50 slots de figurinhas numeradas de `#01` a `#50`. Quando uma figurinha está colada, passar o cursor sobre ela revela curiosidades e a descrição sobre o personagem ou item correspondente.
 
-Proporcionar uma experiência interativa e imersiva de colecionar figurinhas digitais. Ele simula o folhear físico de um álbum de papel diretamente no navegador com 12 páginas (Capa, Contracapa e 10 páginas internas) contendo 50 figurinhas colecionáveis. Possui efeitos de som realistas de virada de página e um sistema interativo onde passar o mouse sobre as figurinhas já coladas revela curiosidades sobre o personagem ou item correspondente.
-
----
-
-## 📂 Funcionalidade dos Arquivos
-
-### 1. 📄 [index.html](file:///c:/Users/VaioFE16/Desktop/Alura_ImersionAI/ImesaoAlura_frontend/index.html)
-* **Estrutura e Conteúdo**: Define o esqueleto HTML do álbum.
-* **Seções do Álbum**: Contém a capa personalizada ("ALURA GEEK/NERD") e 10 páginas temáticas divididas por categorias Geek/Nerd:
-  1. *Super-heróis*
-  2. *Fantasia & RPG*
-  3. *Ficção Científica*
-  4. *Anime & Mangá - Clássicos*
-  5. *Anime & Mangá - Nova Geração*
-  6. *Jogos & Games*
-  7. *Celebridades (Atores & Dubladores)*
-  8. *Música & Trilhas*
-  9. *Gadgets, Símbolos & Memes*
-  10. *Criadores & Comunidade*
-* **Slots das Figurinhas**: Define a posição de cada uma das 50 figurinhas com seu número identificador (ex: `#01 Homem de Ferro`).
-* **Componentes de Controle**: Inclui os botões de navegação lateral (Próxima Página e Página Anterior) e o controle mutador de efeitos sonoros.
-
-### 2. 🎨 [style.css](file:///c:/Users/VaioFE16/Desktop/Alura_ImersionAI/ImesaoAlura_frontend/style.css)
-* **Estilização e Tema**: Define a identidade visual futurista e premium (escura, com gradientes radiais, tons de roxo e violeta).
-* **Efeitos Visuais**: Implementa o efeito *glitch* nos textos da capa, sombras realistas de lombada nas dobras das páginas, e animação de rotação da esfera central.
-* **Badges Temáticas**: Estiliza os badges de cada categoria do álbum com a nova paleta de cores.
-* **Curiosidades no Hover (Tooltip)**: Controla a exibição interativa do texto de descrição/curiosidade (`.slot-role`) quando o usuário passa o mouse por cima de uma figurinha já colada (`.slot-preenchido`), criando um overlay semitransparente sobre a figurinha.
-
-### 3. ⚡ [app.js](file:///c:/Users/VaioFE16/Desktop/Alura_ImersionAI/ImesaoAlura_frontend/app.js)
-* **Integração com Backend**: Realiza chamadas assíncronas para a API local (`http://localhost:8000/figurinhas`) para carregar dinamicamente as figurinhas do ID 1 ao 50 nos slots correspondentes.
-* **Controle da Biblioteca PageFlip**: Inicializa e configura o `St.PageFlip` para lidar com a física de virada das páginas de forma automatizada e com suporte a arraste e gestos mobile.
-* **Controle de Áudio**: Lida com a geração sintetizada de som (Web Audio API) de papel virando para cada troca de página.
+## Sobre as imagens
+* As imagens das figurinhas são servidas dinamicamente a partir do backend.
+* Elas devem ser armazenadas na pasta `backend/figurinhas/` nomeadas com o padrão de prefixo numérico de dois dígitos correspondente ao seu ID (ex: `01-iron_man.jpg`, `02-batman.jpg`, `03-spider_man.jpg`, `04-wonder_woman.jpg` e `05-superman.jpg`).
+* O servidor usa um sistema baseado em `glob` para encontrar a imagem correta correspondente ao ID da figurinha (prefixo `"{id:02d}[!0-9]*"`).
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+## Como rodar
 
-* **HTML5** para estruturação semântica.
-* **CSS3** para o design moderno em tons de roxo/violeta, tooltips interativos e micro-animações.
-* **JavaScript (ES6+)** para manipulação do DOM, controle de áudio sintetizado e consumo de APIs.
-* **St.PageFlip** (biblioteca externa de paginação de livros).
+### [backend/main.py](file:///c:/Users/VaioFE16/Documents/GitHub/ImesaoAlura_WebAI/backend/main.py)
+O backend é uma API FastAPI que:
+1. Inicia o servidor e monta o middleware CORS para permitir requisições de qualquer origem.
+2. Contém uma lista chamada `figurinhas` com os 50 registros do álbum. Atualmente, os registros de ID 1 a 5 estão ativos (pois possuem imagens correspondentes na pasta) e os de ID 6 a 50 estão comentados no código.
+3. Disponibiliza dois endpoints principais:
+   * `GET /figurinhas`: Retorna os dados das figurinhas ativas no formato JSON.
+   * `GET /figurinhas/{id}/imagem`: Retorna o arquivo de imagem correspondente utilizando busca de padrões por `glob`.
+
+Para rodar o backend:
+1. Abra um terminal e acesse a pasta `backend`:
+   ```bash
+   cd backend
+   ```
+2. Inicialize o servidor Uvicorn:
+   ```bash
+   .venv/Scripts/python -m uvicorn main:app --reload --port 8000
+   ```
+
+### [frontend/index.html](file:///c:/Users/VaioFE16/Documents/GitHub/ImesaoAlura_WebAI/frontend/index.html)
+* Estrutura a visualização do álbum, organizando a capa, contracapa, páginas temáticas e os 50 slots onde as figurinhas são coladas de forma dinâmica via JavaScript ([app.js](file:///c:/Users/VaioFE16/Documents/GitHub/ImesaoAlura_WebAI/frontend/app.js)).
+
+Para abrir o frontend:
+* Basta dar dois cliques no arquivo [index.html](file:///c:/Users/VaioFE16/Documents/GitHub/ImesaoAlura_WebAI/frontend/index.html) para abri-lo diretamente no seu navegador, ou iniciá-lo por meio de um servidor estático como a extensão Live Server.
+
+### [frontend/style.css](file:///c:/Users/VaioFE16/Documents/GitHub/ImesaoAlura_WebAI/frontend/style.css)
+* Controla a identidade visual futurista e premium em tons escuros e violeta do álbum.
+* Determina o tamanho físico dos slots regulares (`width: 227px`) e slots especiais ampliados (`width: 305.5px`).
+* Estiliza as figurinhas coladas com efeito de fade-in animado (`sticker-img`).
+
+---
+
+## Controles
+* **Navegação**: Para folhear as páginas do álbum, você pode usar os botões de seta lateral no ecrã, as teclas direcionais (ArrowLeft / ArrowRight) do teclado ou clicar e arrastar diretamente os cantos ou bordas das páginas.
+* **Áudio**: Utilize o botão de controle de áudio no canto superior direito para ativar ou desativar os efeitos sonoros realistas de papel virando.
