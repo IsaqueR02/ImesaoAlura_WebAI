@@ -1,5 +1,8 @@
 # Álbum de Figurinhas - Copa do Mundo Geek/Nerd 🤓✨
 
+## Video Apresentação
+https://github.com/user-attachments/assets/af3aa896-1d83-4ee9-a089-1d4777dc7190
+
 ## Objetivo
 O projeto consiste em um álbum de figurinhas digital, interativo e imersivo com a temática Geek/Nerd. Ele simula a sensação física de folhear um álbum de papel real através de efeitos sonoros sintetizados e uma mecânica de transição de páginas realista (com suporte para gestos e arrastes), permitindo que figurinhas sejam colecionadas e coladas nos slots apropriados de forma dinâmica através de uma API desenvolvida em FastAPI.
 
