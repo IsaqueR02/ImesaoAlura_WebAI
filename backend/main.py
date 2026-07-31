@@ -43,14 +43,14 @@ figurinhas = [
     {"id": 18, "nome": "Naruto Uzumaki", "categoria": "anime-classicos", "imagem_url": "/figurinhas/18/imagem"},
     {"id": 19, "nome": "Ichigo Kurosaki", "categoria": "anime-classicos", "imagem_url": "/figurinhas/19/imagem"},
     {"id": 20, "nome": "Monkey D. Luffy", "categoria": "anime-classicos", "imagem_url": "/figurinhas/20/imagem"},
-    {"id": 21, "nome": "Rudo Surebrec", "categoria": "anime-novagerecao", "imagem_url": "/figurinhas/21/imagem"},
+    {"id": 21, "nome": "Rudo Surebrec", "categoria": "anime-nova-geracao", "imagem_url": "/figurinhas/21/imagem"},
   
-{"id": 22, "nome": "Frieren", "categoria": "anime-novagerecao", "imagem_url": "/figurinhas/22/imagem"},
-    {"id": 23, "nome": "Tanjiro Kamado", "categoria": "anime-novagerecao", "imagem_url": "/figurinhas/23/imagem"},
+{"id": 22, "nome": "Frieren", "categoria": "anime-nova-geracao", "imagem_url": "/figurinhas/22/imagem"},
+    {"id": 23, "nome": "Tanjiro Kamado", "categoria": "anime-nova-geracao", "imagem_url": "/figurinhas/23/imagem"},
   
-{"id": 24, "nome": "Satoru Gojo", "categoria": "anime-novagerecao", "imagem_url": "/figurinhas/24/imagem"},
+{"id": 24, "nome": "Satoru Gojo", "categoria": "anime-nova-geracao", "imagem_url": "/figurinhas/24/imagem"},
   
-{"id": 25, "nome": "Sung Jin-Woo", "categoria": "anime-novagerecao", "imagem_url": "/figurinhas/25/imagem"},
+{"id": 25, "nome": "Sung Jin-Woo", "categoria": "anime-nova-geracao", "imagem_url": "/figurinhas/25/imagem"},
   
 {"id": 26, "nome": "Cloud Strife", "categoria": "jogos-games", "imagem_url": "/figurinhas/26/imagem"},
     {"id": 27, "nome": "Kratos", "categoria": "jogos-games", "imagem_url": "/figurinhas/27/imagem"},
