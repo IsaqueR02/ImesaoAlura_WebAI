@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alura Album - Copa do Mundo Geek/Nerd</title>
+    <title>Coleção Universo Geek - Álbum de Figurinhas</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -52,34 +52,81 @@
                         <span class="cover-seal">COLEÇÃO OFICIAL</span>
                     </div>
                     <div class="cover-body">
-                        <h1 class="cover-title glitch" data-text="ALURA">ALURA</h1>
-                        <h2 class="cover-subtitle glitch" data-text="GEEK/NERD">GEEK/NERD</h2>
+                        <h1 class="cover-title glitch" data-text="UNIVERSO">UNIVERSO</h1>
+                        <h2 class="cover-subtitle glitch" data-text="GEEK">GEEK/NERD</h2>
+
                         <div class="cover-art">
                             <div class="art-grid"></div>
 
-                            <!-- Floating Mini Cards Silhouette Collage -->
-                            <div class="mini-card mc-turing">
-                                <div class="mc-avatar">SH</div>
-                                <span class="mc-num">#01</span>
-                            </div>
-                            <div class="mini-card mc-guido">
-                                <div class="mc-avatar">FZ</div>
-                                <span class="mc-num">#06</span>
-                            </div>
-                            <div class="mini-card mc-jobs">
-                                <div class="mc-avatar">AN</div>
-                                <span class="mc-num">#18</span>
-                            </div>
-
-                            <!-- Central Glowing 3D Tech Sphere -->
-                            <div class="tech-sphere">
-                                <div class="sphere-core">
-                                    <svg class="art-logo" viewBox="0 0 24 24">
-                                        <path d="M12 2L2 22h20L12 2zm0 4l6.5 13h-13L12 6z" />
+                            <!-- Colagem de Mini Cartões Flutuantes (Categorias) -->
+                            <!-- 1. Super-heróis (Máscara Batman / Azul) -->
+                            <div class="mini-card mc-hero" style="--mc-color: #0066ff;">
+                                <div class="mc-avatar">
+                                    <svg viewBox="0 0 24 24" class="mc-icon" fill="currentColor">
+                                        <path d="M12 4.5C10.5 4.5 9 6.5 8 8C6 8 4 9.5 4 12C4 14.5 6 16.5 8 17C10 17 11 15 12 15C13 15 14 17 16 17C18 16.5 20 14.5 20 12C20 9.5 18 8 16 8C15 6.5 13.5 4.5 12 4.5Z"/>
                                     </svg>
                                 </div>
-                                <div class="sphere-ring ring-1"></div>
-                                <div class="sphere-ring ring-2"></div>
+                                <span class="mc-num">#02</span>
+                            </div>
+
+                            <!-- 2. Fantasia & RPG (Dado D20 / Esmeralda) -->
+                            <div class="mini-card mc-fantasy" style="--mc-color: #00a86b;">
+                                <div class="mc-avatar">
+                                    <svg viewBox="0 0 24 24" class="mc-icon" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M12 2L3 7v10l9 5 9-5V7l-9-5z"/>
+                                        <path d="M12 22V12M12 12L3 7M12 12l9-5"/>
+                                    </svg>
+                                </div>
+                                <span class="mc-num">#08</span>
+                            </div>
+
+                            <!-- 3. Animes Clássicos (Chapéu do Luffy / Laranja) -->
+                            <div class="mini-card mc-anime" style="--mc-color: #ff6b00;">
+                                <div class="mc-avatar">
+                                    <svg viewBox="0 0 24 24" class="mc-icon" fill="currentColor">
+                                        <path d="M12 6c-3 0-5.5 1.5-6.5 4H2v2h20v-2h-3.5C17.5 7.5 15 6 12 6zm-5.2 4c.8-1.8 2.8-3 5.2-3s4.4 1.2 5.2 3H6.8z"/>
+                                    </svg>
+                                </div>
+                                <span class="mc-num">#20</span>
+                            </div>
+
+                            <!-- 4. Ficção Científica (Sabre de Luz / Ciano) -->
+                            <div class="mini-card mc-scifi" style="--mc-color: #00d8f6;">
+                                <div class="mc-avatar">
+                                    <svg viewBox="0 0 24 24" class="mc-icon" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M18 4l2-2M6 18l12-12M4 20l2-2M7 17l-1-1"/>
+                                    </svg>
+                                </div>
+                                <span class="mc-num">#13</span>
+                            </div>
+
+                            <!-- 5. Games (Gamepad / Verde Pixel) -->
+                            <div class="mini-card mc-games" style="--mc-color: #00e676;">
+                                <div class="mc-avatar">
+                                    <svg viewBox="0 0 24 24" class="mc-icon" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="2" y="6" width="20" height="12" rx="4"/>
+                                        <path d="M6 12h4M8 10v4M15 11h.01M18 13h.01"/>
+                                    </svg>
+                                </div>
+                                <span class="mc-num">#26</span>
+                            </div>
+
+                            <!-- 6. Nova Geração (Chama / Violeta Intenso) -->
+                            <div class="mini-card mc-newgen" style="--mc-color: #8b5cf6;">
+                                <div class="mc-avatar">
+                                    <svg viewBox="0 0 24 24" class="mc-icon" fill="currentColor">
+                                        <path d="M12 2c0 0-5 3.5-5 8 0 2.5 1.5 4.5 3.5 5.5C10 14 10 13 10.5 12c1.5 2 2.5 2 3.5 4 1-1 1-2 1-3 0-4.5-3-11-3-11z"/>
+                                    </svg>
+                                </div>
+                                <span class="mc-num">#24</span>
+                            </div>
+
+                            <!-- Emblema Central Luminoso -->
+                            <div class="cover-center-badge">
+                                <div class="badge-core">
+                                    <span class="badge-count">50</span>
+                                    <span class="badge-lbl">FIGURINHAS</span>
+                                </div>
                             </div>
                         </div>
                         <p class="cover-footer-text">A SELEÇÃO DE LENDAS DO UNIVERSO GEEK & NERD</p>
@@ -91,7 +138,7 @@
             </div>
 
             <!-- PAGINA 1: SUPER-HERÓIS -->
-            <div class="page page-left">
+            <div class="page page-left page-theme-hero">
                 <div class="page-content">
                     <div class="page-header">
                         <span class="tech-badge badge-hero">SUPER-HERÓIS</span>
@@ -129,7 +176,7 @@
             </div>
 
             <!-- PAGINA 2: FANTASIA & RPG -->
-            <div class="page page-right">
+            <div class="page page-right page-theme-fantasy">
                 <div class="page-content">
                     <div class="page-header">
                         <span class="tech-badge badge-fantasy">FANTASIA & RPG</span>
@@ -167,7 +214,7 @@
             </div>
 
             <!-- PAGINA 3: FICÇÃO CIENTÍFICA -->
-            <div class="page page-left">
+            <div class="page page-left page-theme-scifi">
                 <div class="page-content">
                     <div class="page-header">
                         <span class="tech-badge badge-scifi">FICÇÃO CIENTÍFICA</span>
@@ -205,10 +252,10 @@
             </div>
 
             <!-- PAGINA 4: ANIME & MANGÁ - CLÁSSICOS -->
-            <div class="page page-right">
+            <div class="page page-right page-theme-anime-classic">
                 <div class="page-content">
                     <div class="page-header">
-                        <span class="tech-badge badge-anime">ANIME & MANGÁ</span>
+                        <span class="tech-badge badge-anime-classic">ANIME & MANGÁ</span>
                         <h3 class="page-title">Guerreiros Lendários do Oriente</h3>
                     </div>
                     <div class="stickers-grid">
@@ -243,10 +290,10 @@
             </div>
 
             <!-- PAGINA 5: ANIME & MANGÁ - NOVA GERAÇÃO -->
-            <div class="page page-left">
+            <div class="page page-left page-theme-anime-newgen">
                 <div class="page-content">
                     <div class="page-header">
-                        <span class="tech-badge badge-anime">ANIME & MANGÁ</span>
+                        <span class="tech-badge badge-anime-newgen">ANIME & MANGÁ</span>
                         <h3 class="page-title">Novos Ícones e Aventuras</h3>
                     </div>
                     <div class="stickers-grid">
@@ -281,7 +328,7 @@
             </div>
 
             <!-- PAGINA 6: JOGOS & GAMES -->
-            <div class="page page-right">
+            <div class="page page-right page-theme-games">
                 <div class="page-content">
                     <div class="page-header">
                         <span class="tech-badge badge-games">JOGOS & GAMES</span>
@@ -319,7 +366,7 @@
             </div>
 
             <!-- PAGINA 7: LENDAS DO MUNDO REAL -->
-            <div class="page page-left">
+            <div class="page page-left page-theme-stars">
                 <div class="page-content">
                     <div class="page-header">
                         <span class="tech-badge badge-stars">CELEBRIDADES</span>
@@ -357,7 +404,7 @@
             </div>
 
             <!-- PAGINA 8: MÚSICA & TRILHAS GEEK -->
-            <div class="page page-right">
+            <div class="page page-right page-theme-music">
                 <div class="page-content">
                     <div class="page-header">
                         <span class="tech-badge badge-music">TRILHAS & MÚSICAS</span>
@@ -395,7 +442,7 @@
             </div>
 
             <!-- PAGINA 9: GADGETS, SÍMBOLOS & MEMES -->
-            <div class="page page-left">
+            <div class="page page-left page-theme-memes">
                 <div class="page-content">
                     <div class="page-header">
                         <span class="tech-badge badge-memes">MEMES & GADGETS</span>
@@ -433,7 +480,7 @@
             </div>
 
             <!-- PAGINA 10: CRIADORES E COMUNIDADE -->
-            <div class="page page-right">
+            <div class="page page-right page-theme-community">
                 <div class="page-content">
                     <div class="page-header">
                         <span class="tech-badge badge-community">COMUNIDADE GEEK</span>
@@ -474,14 +521,14 @@
             <div class="page page-cover-back" data-density="hard">
                 <div class="page-content cover-back-content">
                     <div class="cover-back-header">
-                        <h2>ALURA ALBUM</h2>
+                        <h2>UNIVERSO GEEK</h2>
                     </div>
                     <div class="cover-back-body">
                         <div class="tech-logo-collage">
                             <span>HERÓIS</span> • <span>FANTASIA</span> • <span>SCI-FI</span> • <span>ANIME</span> • <span>GAMES</span> • <span>CULTURA GEEK</span>
                         </div>
                         <p class="summary-text">
-                            O Alura Album Geek é um tributo interativo à história e aos personagens, criadores e memes que definem nossa paixão.
+                            O Álbum Coleção Universo Geek é um tributo interativo à história e aos personagens, criadores e memes que definem nossa paixão.
                             Reunindo universos fantásticos e celebridades reais que fazem o mundo nerd pulsar.
                         </p>
                         <div class="barcode-container">

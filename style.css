@@ -190,15 +190,170 @@ body.dragging * {
   letter-spacing: 1.5px;
   box-shadow: 0 3px 6px rgba(0,0,0,0.1);
 }
-.badge-hero { background-color: var(--color-tech-blue); }
-.badge-fantasy { background-color: var(--color-dev-blue); }
-.badge-scifi { background-color: var(--color-deep-blue); }
-.badge-anime { background-color: var(--color-blue-universe); }
-.badge-games { background-color: var(--color-dev-blue); }
-.badge-stars { background-color: var(--color-tech-blue); }
-.badge-music { background-color: var(--color-deep-blue); }
-.badge-memes { background-color: var(--color-blue-universe); }
-.badge-community { background-color: var(--color-dev-blue); }
+.badge-hero { background-color: #0066ff; }
+.badge-fantasy { background-color: #00a86b; }
+.badge-scifi { background-color: #00d8f6; }
+.badge-anime-classic { background-color: #ff6b00; }
+.badge-anime-newgen { background-color: #8b5cf6; }
+.badge-games { background-color: #00e676; }
+.badge-stars { background-color: #f59e0b; }
+.badge-music { background-color: #ff007f; }
+.badge-memes { background-color: #eab308; }
+.badge-community { background-color: #dc2626; }
+
+/* ===================================================
+   PALETA DINÂMICA DE CORES POR CATEGORIA
+   =================================================== */
+
+/* 1. Super-heróis: Azul elétrico */
+.page-theme-hero {
+  --cat-color: #0066ff;
+  --cat-color-light: #3385ff;
+  --cat-glow: rgba(0, 102, 255, 0.35);
+  --cat-bg: rgba(0, 102, 255, 0.04);
+}
+
+/* 2. Fantasia & RPGs: Verde Esmeralda */
+.page-theme-fantasy {
+  --cat-color: #00a86b;
+  --cat-color-light: #20c997;
+  --cat-glow: rgba(0, 168, 107, 0.35);
+  --cat-bg: rgba(0, 168, 107, 0.04);
+}
+
+/* 3. Ficção Científica: Ciano */
+.page-theme-scifi {
+  --cat-color: #00d8f6;
+  --cat-color-light: #5ce6ff;
+  --cat-glow: rgba(0, 216, 246, 0.35);
+  --cat-bg: rgba(0, 216, 246, 0.04);
+}
+
+/* 4. Animes Clássicos: Laranja Vibrante */
+.page-theme-anime-classic {
+  --cat-color: #ff6b00;
+  --cat-color-light: #ff8c33;
+  --cat-glow: rgba(255, 107, 0, 0.35);
+  --cat-bg: rgba(255, 107, 0, 0.04);
+}
+
+/* 5. Nova Geração: Violeta Intenso */
+.page-theme-anime-newgen {
+  --cat-color: #8b5cf6;
+  --cat-color-light: #a78bfa;
+  --cat-glow: rgba(139, 92, 246, 0.35);
+  --cat-bg: rgba(139, 92, 246, 0.04);
+}
+
+/* 6. Games: Verde Pixel */
+.page-theme-games {
+  --cat-color: #00e676;
+  --cat-color-light: #66ffb2;
+  --cat-glow: rgba(0, 230, 118, 0.35);
+  --cat-bg: rgba(0, 230, 118, 0.04);
+}
+
+/* 7. Celebridades/Dubladores: Dourado */
+.page-theme-stars {
+  --cat-color: #f59e0b;
+  --cat-color-light: #fbbf24;
+  --cat-glow: rgba(245, 158, 11, 0.35);
+  --cat-bg: rgba(245, 158, 11, 0.04);
+}
+
+/* 8. Trilhas Sonoras: Rosa Néon */
+.page-theme-music {
+  --cat-color: #ff007f;
+  --cat-color-light: #ff66b2;
+  --cat-glow: rgba(255, 0, 127, 0.35);
+  --cat-bg: rgba(255, 0, 127, 0.04);
+}
+
+/* 9. Gadgets, Símbolos & Memes: Amarelo */
+.page-theme-memes {
+  --cat-color: #eab308;
+  --cat-color-light: #fde047;
+  --cat-glow: rgba(234, 179, 8, 0.4);
+  --cat-bg: rgba(234, 179, 8, 0.05);
+}
+
+/* 10. Comunidade: Vermelho Carmim */
+.page-theme-community {
+  --cat-color: #dc2626;
+  --cat-color-light: #f87171;
+  --cat-glow: rgba(220, 38, 38, 0.35);
+  --cat-bg: rgba(220, 38, 38, 0.04);
+}
+
+/* Regras visuais dinâmicas aplicadas às páginas temáticas */
+.page[class*="page-theme-"] {
+  position: relative;
+}
+
+/* Barra gradiente superior indicadora da categoria */
+.page[class*="page-theme-"]::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--cat-color), var(--cat-color-light));
+  z-index: 5;
+}
+
+.page[class*="page-theme-"] .page-header {
+  border-bottom: 2px solid var(--cat-glow);
+}
+
+.page[class*="page-theme-"] .tech-badge {
+  background-color: var(--cat-color);
+  box-shadow: 0 3px 10px var(--cat-glow);
+  color: #ffffff;
+}
+
+.page[class*="page-theme-"] .sticker-slot {
+  background-color: var(--cat-bg);
+  border-color: var(--cat-glow);
+}
+
+.page[class*="page-theme-"] .sticker-slot:hover {
+  background-color: var(--cat-bg);
+  border-color: var(--cat-color);
+  box-shadow: inset 0 0 12px var(--cat-glow), 0 0 10px var(--cat-glow);
+}
+
+.page[class*="page-theme-"] .special-slot {
+  border-color: var(--cat-color);
+  background-color: var(--cat-bg);
+}
+
+.page[class*="page-theme-"] .slot-number {
+  color: var(--cat-color);
+  background: var(--cat-bg);
+  border: 1px solid var(--cat-glow);
+}
+
+.page[class*="page-theme-"] .sticker-slot:hover .slot-number {
+  background: var(--cat-color);
+  color: #ffffff;
+  border-color: var(--cat-color);
+  box-shadow: 0 0 12px var(--cat-glow);
+}
+
+.page[class*="page-theme-"] .slot-preenchido {
+  border-style: solid !important;
+  border-color: var(--cat-color) !important;
+}
+
+.page[class*="page-theme-"] .slot-preenchido:hover {
+  border-color: var(--cat-color-light) !important;
+  box-shadow: 0 4px 18px var(--cat-glow) !important;
+}
+
+.page[class*="page-theme-"] .page-footer {
+  border-top: 1px solid var(--cat-glow);
+}
 
 .page-title {
   font-family: 'Outfit', sans-serif;
@@ -499,182 +654,203 @@ body.dragging * {
 
 .cover-art {
   position: relative;
-  width: 250px;
-  height: 290px;
-  border: 1px solid rgba(0, 240, 255, 0.2);
-  border-radius: 12px;
-  background: rgba(7, 8, 14, 0.7);
-  box-shadow: 0 20px 45px rgba(0,0,0,0.6), inset 0 0 25px rgba(0, 240, 255, 0.05);
+  width: 300px;
+  height: 310px;
+  border: 1px solid rgba(0, 240, 255, 0.25);
+  border-radius: 16px;
+  background: radial-gradient(circle at center, rgba(14, 20, 45, 0.9) 0%, rgba(6, 7, 14, 0.95) 100%);
+  box-shadow: 0 20px 45px rgba(0,0,0,0.7), inset 0 0 30px rgba(0, 240, 255, 0.08);
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  margin: 15px 0 10px;
 }
 
 .art-grid {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-size: 20px 20px;
+  background-size: 22px 22px;
   background-image: 
-    linear-gradient(to right, rgba(0, 240, 255, 0.05) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(0, 240, 255, 0.05) 1px, transparent 1px);
+    linear-gradient(to right, rgba(0, 240, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 240, 255, 0.04) 1px, transparent 1px);
 }
 
-/* Floating Mini Cards Collage */
+/* Floating Mini Cards Collage (Categorias) */
 .mini-card {
   position: absolute;
-  width: 50px;
-  height: 68px;
-  background: rgba(7, 8, 14, 0.85);
-  border: 1.5px solid rgba(0, 240, 255, 0.25);
-  border-radius: 6px;
+  width: 58px;
+  height: 82px;
+  background: rgba(8, 10, 20, 0.9);
+  border: 1.5px solid var(--mc-color, #00f0ff);
+  border-radius: 8px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  padding: 6px 4px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4), inset 0 0 8px rgba(0, 240, 255, 0.1);
-  z-index: 2;
-  transition: all 0.3s ease;
+  padding: 8px 4px 6px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.55), inset 0 0 10px rgba(255, 255, 255, 0.03);
+  z-index: 3;
+  transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+  cursor: pointer;
 }
 
 .mini-card:hover {
-  border-color: #00f0ff;
-  box-shadow: 0 0 15px rgba(0, 240, 255, 0.4);
-  transform: scale(1.1) translateY(-5px) !important;
-  z-index: 6;
+  box-shadow: 0 0 20px var(--mc-color), 0 10px 30px rgba(0, 0, 0, 0.8);
+  transform: scale(1.25) rotate(0deg) !important;
+  z-index: 10;
 }
 
 .mc-avatar {
-  font-family: 'Outfit', sans-serif;
-  font-weight: 800;
-  font-size: 0.65rem;
-  color: #00f0ff;
-  background: rgba(0, 240, 255, 0.1);
-  border: 1px solid rgba(0, 240, 255, 0.25);
-  width: 24px;
-  height: 24px;
+  width: 34px;
+  height: 34px;
   border-radius: 50%;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--mc-color);
+  color: var(--mc-color);
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 0 0 8px var(--mc-color);
+}
+
+.mc-icon {
+  width: 20px;
+  height: 20px;
 }
 
 .mc-num {
   font-family: monospace;
-  font-size: 0.6rem;
-  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--mc-color);
+  letter-spacing: 0.5px;
 }
 
-.mc-turing {
-  top: 25px;
-  left: 25px;
-  transform: rotate(-12deg);
-  animation: floatCard1 6s infinite ease-in-out;
+/* Positioning & Animation for the 6 Mini Cards */
+.mc-hero {
+  top: 18px;
+  left: 18px;
+  transform: rotate(-14deg);
+  animation: floatCard1 5.5s infinite ease-in-out;
 }
 
-.mc-guido {
-  bottom: 25px;
-  left: 20px;
-  transform: rotate(8deg);
-  animation: floatCard2 7s infinite ease-in-out;
+.mc-fantasy {
+  top: 22px;
+  right: 18px;
+  transform: rotate(12deg);
+  animation: floatCard2 6s infinite ease-in-out;
 }
 
-.mc-jobs {
-  top: 85px;
-  right: 20px;
-  transform: rotate(15deg);
+.mc-anime {
+  top: 112px;
+  left: 10px;
+  transform: rotate(-8deg);
   animation: floatCard3 6.5s infinite ease-in-out;
 }
 
+.mc-scifi {
+  top: 116px;
+  right: 12px;
+  transform: rotate(10deg);
+  animation: floatCard4 5.8s infinite ease-in-out;
+}
+
+.mc-games {
+  bottom: 18px;
+  left: 22px;
+  transform: rotate(14deg);
+  animation: floatCard5 7s infinite ease-in-out;
+}
+
+.mc-newgen {
+  bottom: 22px;
+  right: 20px;
+  transform: rotate(-12deg);
+  animation: floatCard6 6.2s infinite ease-in-out;
+}
+
 @keyframes floatCard1 {
-  0%, 100% { transform: rotate(-12deg) translateY(0); }
-  50% { transform: rotate(-10deg) translateY(-6px); }
+  0%, 100% { transform: rotate(-14deg) translateY(0); }
+  50% { transform: rotate(-10deg) translateY(-8px); }
 }
 
 @keyframes floatCard2 {
-  0%, 100% { transform: rotate(8deg) translateY(0); }
-  50% { transform: rotate(6deg) translateY(-4px); }
+  0%, 100% { transform: rotate(12deg) translateY(0); }
+  50% { transform: rotate(15deg) translateY(-6px); }
 }
 
 @keyframes floatCard3 {
-  0%, 100% { transform: rotate(15deg) translateY(0); }
-  50% { transform: rotate(18deg) translateY(-5px); }
+  0%, 100% { transform: rotate(-8deg) translateY(0); }
+  50% { transform: rotate(-5deg) translateY(-9px); }
 }
 
-/* Central Glowing 3D Tech Sphere */
-.tech-sphere {
+@keyframes floatCard4 {
+  0%, 100% { transform: rotate(10deg) translateY(0); }
+  50% { transform: rotate(7deg) translateY(-7px); }
+}
+
+@keyframes floatCard5 {
+  0%, 100% { transform: rotate(14deg) translateY(0); }
+  50% { transform: rotate(11deg) translateY(-8px); }
+}
+
+@keyframes floatCard6 {
+  0%, 100% { transform: rotate(-12deg) translateY(0); }
+  50% { transform: rotate(-16deg) translateY(-6px); }
+}
+
+/* Emblema Central Luminoso */
+.cover-center-badge {
   position: relative;
-  width: 110px;
-  height: 110px;
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0, 240, 255, 0.25) 0%, rgba(139, 92, 246, 0.15) 100%);
+  border: 1.5px solid rgba(0, 240, 255, 0.5);
+  box-shadow: 0 0 25px rgba(0, 240, 255, 0.4), inset 0 0 15px rgba(139, 92, 246, 0.3);
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 3;
+  z-index: 2;
+  animation: badgePulse 4s infinite ease-in-out;
 }
 
-.sphere-core {
-  width: 66px;
-  height: 66px;
-  border-radius: 50%;
-  background: radial-gradient(circle, #00f0ff 0%, #1f53e5 100%);
-  box-shadow: 0 0 25px rgba(0, 240, 255, 0.75), inset 0 0 10px rgba(255, 255, 255, 0.4);
+.badge-core {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  z-index: 5;
-  animation: spherePulse 4s infinite ease-in-out;
+  line-height: 1;
 }
 
-.art-logo {
-  width: 32px;
-  height: 32px;
-  stroke: var(--color-white-snow);
-  stroke-width: 2;
-  fill: none;
+.badge-count {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #ffffff;
+  text-shadow: 0 0 10px #00f0ff, 0 0 20px #8b5cf6;
 }
 
-.sphere-ring {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border: 1.5px solid rgba(0, 240, 255, 0.4);
-  border-radius: 50%;
-  pointer-events: none;
+.badge-lbl {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.55rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: #00f0ff;
+  margin-top: 2px;
 }
 
-.sphere-ring.ring-1 {
-  transform: rotateX(70deg) rotateY(15deg);
-  animation: spinRing1 8s infinite linear;
-  border-top-color: transparent;
-}
-
-.sphere-ring.ring-2 {
-  transform: rotateX(15deg) rotateY(70deg);
-  animation: spinRing2 8s infinite linear;
-  border-bottom-color: transparent;
-}
-
-@keyframes spherePulse {
+@keyframes badgePulse {
   0%, 100% {
     transform: scale(1);
-    box-shadow: 0 0 20px rgba(0, 240, 255, 0.6);
+    box-shadow: 0 0 20px rgba(0, 240, 255, 0.4), inset 0 0 15px rgba(139, 92, 246, 0.3);
   }
   50% {
     transform: scale(1.06);
-    box-shadow: 0 0 35px rgba(0, 240, 255, 0.9);
+    box-shadow: 0 0 35px rgba(0, 240, 255, 0.7), inset 0 0 22px rgba(139, 92, 246, 0.5);
   }
-}
-
-@keyframes spinRing1 {
-  0% { transform: rotateX(70deg) rotateY(15deg) rotateZ(0deg); }
-  100% { transform: rotateX(70deg) rotateY(15deg) rotateZ(360deg); }
-}
-
-@keyframes spinRing2 {
-  0% { transform: rotateX(15deg) rotateY(70deg) rotateZ(360deg); }
-  100% { transform: rotateX(15deg) rotateY(70deg) rotateZ(0deg); }
 }
 
 .cover-footer-text {
